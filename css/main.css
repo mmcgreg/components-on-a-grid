@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  font-family: "Patua One", "Georgia" serif;
+  line-height: 1.5;
 }
 
 *,
@@ -12,7 +14,47 @@ img {
   width: 100%;
 }
 
+body {
+  display: grid;
+  gap: 1rem;
+  line-height: 1.5;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "banner banner"
+  "main main"
+}
+
+.pano {
+  grid-area: banner;
+
+}
+
+.logo {
+  grid-area: banner;
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  width: 14rem;
+}
+
+nav {
+  grid-area: banner;
+  display: grid;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: underline;
+  font-family: "Patua One";
+}
+
 header {
-  /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
+  /* Removes the <header> box and allows us to directly apply header’s children to the grid. */
   display: contents;
 }
